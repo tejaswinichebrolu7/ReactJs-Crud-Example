@@ -10,6 +10,7 @@ import Edit from './components/Edit';
 import Create from './components/Create';
 import Show from './components/Show';
 import Hackathon from './components/Hackathon';
+import DeleteHackathon from './components/DeleteHackathon';
 
 ReactDOM.render(
   <Router>
