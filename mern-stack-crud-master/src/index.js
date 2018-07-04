@@ -19,7 +19,7 @@ ReactDOM.render(
         <Route exact path='/hackathon' component={Hackathon} />
         <Route path='/edit/:id' component={Hackathon} />
         <Route path='/show/:id' component={Hackathon} />
-        <Route path='/delete/:id' component={DeleteHackathon} />
+        
       </div>
   </Router>,
   document.getElementById('root')

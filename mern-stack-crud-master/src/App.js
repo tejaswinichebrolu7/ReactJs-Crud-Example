@@ -10,6 +10,7 @@ class App extends Component {
     this.state = {
       hackathons: []
     };
+    this.deleteHackathon = this.deleteHackathon.bind(this);
   }
 
   componentDidMount() {
@@ -20,13 +21,13 @@ class App extends Component {
       });
   }
 
-  /*deleteHackathon(id){
+  deleteHackathon(id){
     console.log("coming.............");
     axios.delete('/api/hackathon/'+id )
       .then(res => {
-        this.setState({ hackathons: res.data });
+        console.log("coming");
       });
-  }*/
+  }
 
   render() {
     return (
@@ -61,7 +62,7 @@ class App extends Component {
                     <td>
                     <a href={`/show/${hackathon._id}`} class="glyphicon glyphicon-eye-open"></a>
                     <a href={`/edit/${hackathon._id}`} class="glyphicon glyphicon-pencil"></a>
-                    <a  href={`/delete/${hackathon._id}`} class="glyphicon glyphicon-trash"></a> 
+                    <a onclick={this.deleteHackathon(hackathon._id)} class="glyphicon glyphicon-trash"></a> 
                     </td>
                   </tr>
                 )}
